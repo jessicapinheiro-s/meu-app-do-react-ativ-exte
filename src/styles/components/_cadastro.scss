@@ -1,0 +1,60 @@
+@import '../abstract/mixins';
+@import '../abstract/variaves';
+
+* {
+    //border: 1px solid red;
+}
+
+body {
+    background-color: $cor-terciaria;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+
+}
+
+.modal-bg {
+    background-color: white;
+    width: 400px;
+    margin: 50% auto;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px 30px;
+
+    .logo-cadastro {
+        text-align: center;
+
+        img {
+            width: 100px;
+        }
+    }
+
+    .inputs-login-form {
+        display: flex;
+        flex-direction: column;
+
+        input {
+            border: none;
+            outline: none;
+            background-color: #f0f0f0;
+            padding: 10px;
+            border-radius: 10px;
+            margin: 3px 0px 8px;
+        }
+    }
+
+    .btCadastro {
+        margin: 0 auto;
+        cursor: pointer;
+        background-color: $cor-principal;
+        border-radius: 10px;
+        padding: 10px 15px;
+        border: none;
+        
+
+        &:hover{
+            background-color: $cor-quartenaria;
+            transition: all 0.5s;
+        }
+    }
+}

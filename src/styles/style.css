@@ -30,6 +30,52 @@
   padding: 0px 20px;
 }
 
+body {
+  background-color: #8ECDDD;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+}
+
+.modal-bg {
+  background-color: white;
+  width: 400px;
+  margin: 50% auto;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px 30px;
+}
+.modal-bg .logo-cadastro {
+  text-align: center;
+}
+.modal-bg .logo-cadastro img {
+  width: 100px;
+}
+.modal-bg .inputs-login-form {
+  display: flex;
+  flex-direction: column;
+}
+.modal-bg .inputs-login-form input {
+  border: none;
+  outline: none;
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 3px 0px 8px;
+}
+.modal-bg .btCadastro {
+  margin: 0 auto;
+  cursor: pointer;
+  background-color: #FFCC70;
+  border-radius: 10px;
+  padding: 10px 15px;
+  border: none;
+}
+.modal-bg .btCadastro:hover {
+  background-color: #FFFADD;
+  transition: all 0.5s;
+}
+
 * {
   margin: 0;
   padding: 0;

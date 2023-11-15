@@ -9,21 +9,21 @@ import {
 import Dashboard from './Pages/dashboard';
 import MeuPerfil from './Pages/meuPerfil';
 import MeuProgresso from './Pages/meuProgresso';
-import Login from './Pages/login';
+import Cadastro from './Pages/cadastro';
 
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Login/>,
+    element: <Cadastro/>,
   },
   {
     path: "/meuPerfil",
     element: <MeuPerfil/>,
   },
   {
-    path: "/login",
-    element: <Login/>,
+    path: "/dashboard",
+    element: <Dashboard/>,
   },
   {
     path: "/meuProgresso",

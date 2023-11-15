@@ -1,10 +1,11 @@
 import React from "react"
 import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
-import './styles/style.css';
 import Dashboard from './Pages/dashboard';
 import MeuPerfil from './Pages/meuPerfil';
 import MeuProgresso from './Pages/meuProgresso';
-import Login from './Pages/login';
+import Cadastro from './Pages/cadastro'
+import './style.css';
+
 
 function App() {
   return (
@@ -22,7 +23,7 @@ function App() {
       </ul>
       <Routes>
         <Route path='/'>
-          <Login/>
+          <Cadastro/>
         </Route>
         <Route path='/dashboard'>
           <Dashboard/>
