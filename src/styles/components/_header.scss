@@ -1,19 +1,30 @@
-@import './asbtract/_mixins';
+@import '../abstract/mixins';
 
-.header{
+.header {
     background-color: $cor-principal;
     width: 100%;
-    @include alinhamentoFlex();
-    #logo-header{
-        width: 20%;
-    }
 
-    .nav-menu-header{
+    #logo-header {
+        width:40%;
+        img{
+            width:100px;
+        }
+    }
+    .sub-container-header {
+        @include alinhamentoFlex();
+        width: 100%;
+    }
+    .nav-menu-header {
         width: 30%;
-        ul{
+        ul {
             list-style: none;
             justify-content: space-between;
             @include alinhamentoFlex();
         }
+    }
+    .saudacoes{
+        width: 30%;
+        text-align: right;
+        padding: 0px 20px;
     }
 }

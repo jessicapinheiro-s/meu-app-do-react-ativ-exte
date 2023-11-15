@@ -1,12 +1,18 @@
 .header {
   background-color: #FFCC70;
   width: 100%;
+}
+.header #logo-header {
+  width: 40%;
+}
+.header #logo-header img {
+  width: 100px;
+}
+.header .sub-container-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-.header #logo-header {
-  width: 20%;
+  width: 100%;
 }
 .header .nav-menu-header {
   width: 30%;
@@ -17,6 +23,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.header .saudacoes {
+  width: 30%;
+  text-align: right;
+  padding: 0px 20px;
 }
 
 * {
