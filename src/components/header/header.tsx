@@ -9,9 +9,9 @@ export default function MenuHeader(props: any) {
             </div>
             <nav className='nav-menu-header'>
                 <ul>
-                    <li>Home</li>
-                    <li>Account</li>
                     <li>Dashboard</li>
+                    <li>Meu Perfil</li>
+                    <li>Meu progresso</li>
                 </ul>
             </nav>
             <p className='saudacoes'>Olá! {props.nome}</p>
