@@ -1,0 +1,19 @@
+@import './asbtract/_mixins';
+
+.header{
+    background-color: $cor-principal;
+    width: 100%;
+    @include alinhamentoFlex();
+    #logo-header{
+        width: 20%;
+    }
+
+    .nav-menu-header{
+        width: 30%;
+        ul{
+            list-style: none;
+            justify-content: space-between;
+            @include alinhamentoFlex();
+        }
+    }
+}
