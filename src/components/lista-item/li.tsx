@@ -3,11 +3,11 @@ import '../../styles/style.css';
 
 interface liProps{
     title:string;
+    icon?:React.ReactNode;
 }
 
 export default function Li(props: liProps) {
     return (
-    <li>{props.title}</li>
-
+    <li>{props.icon}{props.title} </li>
     )
 }
