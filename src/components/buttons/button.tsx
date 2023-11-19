@@ -6,7 +6,6 @@ interface buttonProps{
 
 }
 function handleClick(){
-
     console.log('asdas');
 }
 

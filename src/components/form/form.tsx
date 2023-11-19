@@ -20,7 +20,9 @@ export default function Formulario(props: any) {
                     <Button className='button-cadastrar'>
                         Cadastrar
                     </Button>
-                    <a href="#">Login</a>
+                    <Button className="button-login">
+                        Login
+                    </Button>
                 </div>
             </div>
         </div>

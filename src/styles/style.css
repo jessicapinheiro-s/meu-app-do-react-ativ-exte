@@ -34,17 +34,18 @@
 }
 
 body {
-  background-color: #8ECDDD;
+  background-color: white;
 }
 
 .modal-bg {
   box-sizing: border-box;
+  box-shadow: 2px 3px 5px 3px rgba(219, 219, 219, 0.39);
   background-color: white;
   width: 500px;
   margin: auto;
   background-color: white;
   border-radius: 10px;
-  padding: 30px 40px;
+  padding: 40px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -64,7 +65,7 @@ body {
   border: none;
   outline: none;
   padding: 10px;
-  margin: 3px 0px 8px;
+  margin: 10px 0px;
   border-bottom: 3px solid rgba(245, 245, 245, 0.6588235294);
 }
 .modal-bg .inputs-login-form input:focus {
@@ -74,18 +75,29 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
 }
 .modal-bg .container-buttons .button-cadastrar {
-  margin: 0 auto;
+  margin: 15px auto;
   cursor: pointer;
-  background-color: #FFCC70;
+  background-color: #8ECDDD;
   border-radius: 10px;
   padding: 10px 15px;
   border: none;
+  color: white;
+  font-size: 1rem;
 }
 .modal-bg .container-buttons .button-cadastrar:hover {
-  background-color: #FFFADD;
+  background-color: #22668D;
   transition: all 0.5s;
+}
+.modal-bg .container-buttons .button-login {
+  border: none;
+  background-color: transparent;
+  text-decoration: underline;
+}
+.modal-bg .container-buttons .button-login:hover {
+  text-decoration: none;
 }
 
 * {

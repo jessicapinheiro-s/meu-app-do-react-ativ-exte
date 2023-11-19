@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import logo from '../../imgs/logo.svg';
 import '../../styles/style.css';
 
@@ -11,9 +12,18 @@ export default function MenuHeader(props: any) {
             <p className='saudacoes'>Olá! {props.nome}</p>
             <nav className='nav-menu-header'>
                 <ul>
-                    <li><a href="/">Dashboard</a></li>
-                    <li><a href='/'>Meu Perfil</a></li>
-                    <li><a href="/">Meu progresso</a></li>
+                    <li>
+                        <Link to='/'>Cadastro</Link>
+                    </li>
+                    <li>
+                        <Link to='/dashboard'>Dashboard</Link>
+                    </li>
+                    <li>
+                        <Link to='/meuPerfil'>Meu Perfil</Link>
+                    </li>
+                    <li>
+                        <Link to='/meuProgresso'>Meu progresso</Link>
+                    </li>
                 </ul>
             </nav>
         </header>
