@@ -1,25 +1,23 @@
 @import '../abstract/mixins';
 @import '../abstract/variaves';
 
-* {
-    //border: 1px solid red;
-}
 
 body {
     background-color: $cor-terciaria;
-    display: flex;
-    align-items: baseline;
-    justify-content: center;
-
 }
 
 .modal-bg {
+    box-sizing: border-box;
     background-color: white;
-    width: 400px;
-    margin: 50% auto;
+    width: 500px;
+    margin: auto;
     background-color: white;
     border-radius: 10px;
-    padding: 20px 30px;
+    padding: 30px 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
     .logo-cadastro {
         text-align: center;
@@ -36,25 +34,38 @@ body {
         input {
             border: none;
             outline: none;
-            background-color: #f0f0f0;
             padding: 10px;
-            border-radius: 10px;
             margin: 3px 0px 8px;
+            border-bottom: 3px solid $cor-borda;
+
+            &:focus {
+                border-bottom: 3px solid $cor-secundaria;
+
+            }
+        }
+
+
+    }
+
+    .container-buttons {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .button-cadastrar {
+            margin: 0 auto;
+            cursor: pointer;
+            background-color: $cor-principal;
+            border-radius: 10px;
+            padding: 10px 15px;
+            border: none;
+
+
+            &:hover {
+                background-color: $cor-quartenaria;
+                transition: all 0.5s;
+            }
         }
     }
 
-    .btCadastro {
-        margin: 0 auto;
-        cursor: pointer;
-        background-color: $cor-principal;
-        border-radius: 10px;
-        padding: 10px 15px;
-        border: none;
-        
-
-        &:hover{
-            background-color: $cor-quartenaria;
-            transition: all 0.5s;
-        }
-    }
 }

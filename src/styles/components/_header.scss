@@ -1,30 +1,42 @@
 @import '../abstract/mixins';
+@import '../abstract/variaves';
 
-.header {
+
+.container-header {
+    @include alinhamentoFlex();
     background-color: $cor-principal;
     width: 100%;
 
     #logo-header {
-        width:40%;
-        img{
-            width:100px;
+        width: 33%;
+        img {
+            width: 100px;
+
         }
     }
-    .sub-container-header {
-        @include alinhamentoFlex();
-        width: 100%;
-    }
+
     .nav-menu-header {
-        width: 30%;
+        width: 33%;
+
         ul {
             list-style: none;
             justify-content: space-between;
             @include alinhamentoFlex();
+            list-style: none;
+
+            a {
+                text-decoration: none;
+                color: black;
+            }
         }
     }
-    .saudacoes{
-        width: 30%;
-        text-align: right;
+
+    .saudacoes {
+        width: 33%;
+        text-align: center;
         padding: 0px 20px;
+        word-wrap: break-word;
+
     }
+
 }
