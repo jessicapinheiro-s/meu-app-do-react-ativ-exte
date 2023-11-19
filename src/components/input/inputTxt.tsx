@@ -5,7 +5,7 @@ interface inputTxtProps{
     placeholder:string;
 }
 
-function inputTexto(props: inputTxtProps) {
+export default function InputTexto(props: inputTxtProps) {
     return (
         <input type="text" placeholder={ props.placeholder} required />
     )

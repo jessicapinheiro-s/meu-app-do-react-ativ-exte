@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import MenuHeader from '../components/header/header';
-import React from "react"
+import React from "react";
 
 export default function Dashboard (){
     return(
@@ -12,6 +12,7 @@ export default function Dashboard (){
                 </div>
                 <div>
                     <span>Progresso</span>
+                    <input type="range" />
                 </div>
             </div>
         </div>

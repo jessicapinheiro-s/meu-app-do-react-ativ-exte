@@ -1,0 +1,17 @@
+@import '../abstract/mixins';
+@import '../abstract/variaves';
+
+.container-meu-perfil{
+    width: 500px;
+    @include alinhamentoMeioPosition;
+    .Info-List{
+        ul{
+            li{
+                list-style: none;
+                border: 1px solid $cor-borda;
+                border-radius: 1px;
+                padding:10px;
+            }
+        }
+    }
+}

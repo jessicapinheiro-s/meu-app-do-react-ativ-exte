@@ -100,6 +100,20 @@ body {
   text-decoration: none;
 }
 
+.container-meu-perfil {
+  width: 500px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.container-meu-perfil .Info-List ul li {
+  list-style: none;
+  border: 1px solid rgba(245, 245, 245, 0.6588235294);
+  border-radius: 1px;
+  padding: 10px;
+}
+
 * {
   margin: 0;
   padding: 0;
