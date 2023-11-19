@@ -192,7 +192,7 @@ body {
   width: 100%;
 }
 
-@media (max-width: 768px) {
+@media only screen and (max-width: 768px) {
   .modal-bg,
   .container-meu-perfil {
     width: 400px;
