@@ -1,16 +1,68 @@
 @import '../abstract/mixins';
 @import '../abstract/variaves';
 
-.container-meu-perfil{
+.container-meu-perfil {
     width: 500px;
+    border-radius: 10px;
+    padding: 30px 45px;
+    box-shadow: 1px 3px 5px 3px #dbdbdb63;
     @include alinhamentoMeioPosition;
-    .Info-List{
-        ul{
-            li{
+
+    .Title {
+        h1 {
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+    }
+
+    .Info-List {
+        ul {
+            .li-meu-perfil-info {
                 list-style: none;
-                border: 1px solid $cor-borda;
+                border: 1px solid #dbdbdb63;
                 border-radius: 1px;
-                padding:10px;
+                padding: 10px;
+                margin: 15px 0px;
+                display: flex;
+                justify-content: left;
+                align-items: center;
+                gap: 20px;
+            }
+        }
+    }
+
+    .progresso-container {
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        gap: 20px;
+
+        .progressoBar {
+            -webkit-appearance: none;
+            appearance: none;
+            height: 5px;
+            background: #d3d3d3;
+            outline: none;
+            border-radius: 5px;
+
+            &::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                /* Remove estilos padrão do WebKit/Blink */
+                appearance: none;
+                width: 15px;
+                /* Largura do cursor do controle deslizante */
+                height: 15px;
+                /* Altura do cursor do controle deslizante */
+                background: $cor-secundaria;
+                cursor: pointer;
+                /* Altera o cursor ao pairar sobre o cursor do controle deslizante */
+                border-radius: 50%;
+            }
+
+            &::-webkit-slider-runnable-track {
+                width: 100%;
+                background: #f1f1f1;
+                border-radius: 5px;
             }
         }
     }

@@ -1,0 +1,39 @@
+@import '../abstract/mixins';
+@import '../abstract/variaves';
+
+.container-buttons {
+    @include alinhamentoFlex();
+    width: 100%;
+
+    .button-cadastrar {
+        @include buttonTam();
+        background-color: $cor-terciaria;
+        color: white;
+
+        &:hover {
+            background-color: $cor-secundaria;
+            transition: all 0.5s;
+        }
+       
+    }
+    .button-login {
+        border: none;
+        background-color: transparent;
+        text-decoration: underline;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+}
+
+.buttonExcluir{
+    @include buttonTam();
+    color: white;
+    background-color: $cor-red;
+    &:hover {
+        background-color: $cor-red-dark;
+        transition: all 0.5s;
+    }
+}

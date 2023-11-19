@@ -5,6 +5,8 @@ import { FaRegUser } from "react-icons/fa";
 import { MdOutlineMail } from "react-icons/md";
 import { MdOutlinePassword } from "react-icons/md";
 import { CiCalendarDate } from "react-icons/ci";
+import Button from '../components/buttons/button';
+import '../styles/style.css'
 
 
 
@@ -18,27 +20,31 @@ export default function MeuPerfil(props: MeuPerfilProps) {
         <div>
             <MenuHeader />
             <div className='container-meu-perfil'>
-                <div>
-                    <span>Olá, {props.nome}</span>
+                <div className='Title'>
+                    <h1>Olá, {props.nome}</h1>
                 </div>
                 <div className='info'>
-                    <div>
-                        <span>Progresso</span>
+                    <div className='progresso-container'>
+                        <p>Progresso</p>
                         <input
                             min="0"
                             max="100"
                             step="1"
                             type="range"
-                            readOnly />
+                            readOnly 
+                            className='progressoBar'/>
                     </div>
                     <div className='Info-List'>
                         <ul>
-                            <Li icon={<FaRegUser />} title='Jéssica Pinheiro Silva' />
-                            <Li icon={<MdOutlineMail />}title='jessicasilva.js1314@gmail.com' />
-                            <Li icon={<CiCalendarDate />}title='11/03/2002' />
-                            <Li icon={<MdOutlinePassword />}title='celular@' />
+                            <Li className= 'li-meu-perfil-info'icon={<FaRegUser />} title='Jéssica Pinheiro Silva' />
+                            <Li className= 'li-meu-perfil-info' icon={<MdOutlineMail />}title='jessicasilva.js1314@gmail.com' />
+                            <Li className= 'li-meu-perfil-info' icon={<CiCalendarDate />}title='11/03/2002' />
+                            <Li className= 'li-meu-perfil-info' icon={<MdOutlinePassword />}title='celular@' />
                         </ul>
                     </div>
+                    <Button className='buttonExcluir'>
+                        Excluir
+                    </Button>
                 </div>
             </div>
         </div>

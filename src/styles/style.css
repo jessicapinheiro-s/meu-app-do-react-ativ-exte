@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .container-header {
   display: flex;
   justify-content: space-around;
@@ -71,53 +72,115 @@ body {
 .modal-bg .inputs-login-form input:focus {
   border-bottom: 3px solid #22668D;
 }
-.modal-bg .container-buttons {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-}
-.modal-bg .container-buttons .button-cadastrar {
-  margin: 15px auto;
-  cursor: pointer;
-  background-color: #8ECDDD;
-  border-radius: 10px;
-  padding: 10px 15px;
-  border: none;
-  color: white;
-  font-size: 1rem;
-}
-.modal-bg .container-buttons .button-cadastrar:hover {
-  background-color: #22668D;
-  transition: all 0.5s;
-}
-.modal-bg .container-buttons .button-login {
-  border: none;
-  background-color: transparent;
-  text-decoration: underline;
-}
-.modal-bg .container-buttons .button-login:hover {
-  text-decoration: none;
-}
 
 .container-meu-perfil {
   width: 500px;
+  border-radius: 10px;
+  padding: 30px 45px;
+  box-shadow: 1px 3px 5px 3px rgba(219, 219, 219, 0.3882352941);
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.container-meu-perfil .Info-List ul li {
+.container-meu-perfil .Title h1 {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+.container-meu-perfil .Info-List ul .li-meu-perfil-info {
   list-style: none;
-  border: 1px solid rgba(245, 245, 245, 0.6588235294);
+  border: 1px solid rgba(219, 219, 219, 0.3882352941);
   border-radius: 1px;
   padding: 10px;
+  margin: 15px 0px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 20px;
+}
+.container-meu-perfil .progresso-container {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 20px;
+}
+.container-meu-perfil .progresso-container .progressoBar {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  height: 5px;
+  background: #d3d3d3;
+  outline: none;
+  border-radius: 5px;
+}
+.container-meu-perfil .progresso-container .progressoBar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  /* Remove estilos padrão do WebKit/Blink */
+  appearance: none;
+  width: 15px;
+  /* Largura do cursor do controle deslizante */
+  height: 15px;
+  /* Altura do cursor do controle deslizante */
+  background: #22668D;
+  cursor: pointer;
+  /* Altera o cursor ao pairar sobre o cursor do controle deslizante */
+  border-radius: 50%;
+}
+.container-meu-perfil .progresso-container .progressoBar::-webkit-slider-runnable-track {
+  width: 100%;
+  background: #f1f1f1;
+  border-radius: 5px;
+}
+
+.container-buttons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+.container-buttons .button-cadastrar {
+  margin: 15px auto;
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 10px 15px;
+  border: none;
+  font-size: 1rem;
+  background-color: #8ECDDD;
+  color: white;
+}
+.container-buttons .button-cadastrar:hover {
+  background-color: #22668D;
+  transition: all 0.5s;
+}
+.container-buttons .button-login {
+  border: none;
+  background-color: transparent;
+  text-decoration: underline;
+}
+.container-buttons .button-login:hover {
+  text-decoration: none;
+}
+
+.buttonExcluir {
+  margin: 15px auto;
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 10px 15px;
+  border: none;
+  font-size: 1rem;
+  color: white;
+  background-color: red;
+}
+.buttonExcluir:hover {
+  background-color: #970000;
+  transition: all 0.5s;
 }
 
 * {
   margin: 0;
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
 }
 
 .container-geral {

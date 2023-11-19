@@ -45,38 +45,6 @@ body {
 
     }
 
-    .container-buttons {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        width: 100%;
-
-        .button-cadastrar {
-            margin: 15px auto;
-            cursor: pointer;
-            background-color: $cor-terciaria;
-            border-radius: 10px;
-            padding: 10px 15px;
-            border: none;
-            color: white;
-            font-size: 1rem;
-
-            &:hover {
-                background-color: $cor-secundaria;
-                transition: all 0.5s;
-            }
-           
-        }
-        .button-login {
-            border: none;
-            background-color: transparent;
-            text-decoration: underline;
-
-            &:hover {
-                text-decoration: none;
-            }
-        }
-
-    }
+    
 
 }

@@ -1,11 +1,21 @@
-@mixin alinhamentoFlex{
+@mixin alinhamentoFlex {
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
-@mixin alinhamentoMeioPosition{
+
+@mixin alinhamentoMeioPosition {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+@mixin buttonTam {
+    margin: 15px auto;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 10px 15px;
+    border: none;
+    font-size: 1rem;
 }
