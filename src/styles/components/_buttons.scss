@@ -17,12 +17,12 @@
        
     }
     .button-login {
-        border: none;
-        background-color: transparent;
-        text-decoration: underline;
+        @include buttonTam();
+        background-color: $cor-terciaria;
 
         &:hover {
-            text-decoration: none;
+            background-color: $cor-secundaria;
+            transition: all 0.5s;
         }
     }
 
