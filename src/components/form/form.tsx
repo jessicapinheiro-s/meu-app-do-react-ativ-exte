@@ -2,13 +2,10 @@ import { useState } from "react";
 import logo from '../../imgs/logo.svg';
 import '../../styles/style.css';
 import Button from '../buttons/button';
-import Cadastro from "../../Pages/cadastro";
 import { Link } from 'react-router-dom';
 
-export default function Formulario(props: any) {
+export default function Formulario() {
     //Definindo Estado
-    let eventLocalStorage:string = '';
-    let form:string = '';
 
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
@@ -18,32 +15,40 @@ export default function Formulario(props: any) {
     //função que irá retornar algo
     const handleCadastro = (event: any) => {
         event.preventDefault();
-        event = 'Cadastro';
-        eventLocalStorage = 'Criar';
-        
-        console.log({
-            name,
-            email,
-            password,
-            dataNascimento
-        });
         tratandoDados();
+
     }
 
     //função para criar, obter e remover dados do localStorage 
-    function tratandoDados ()  {
-        let listaUsers: Array<object> = JSON.parse(localStorage.getItem('listaUsers') || '[]');
+    function tratandoDados() {
 
+        interface UserProps{
+            nome: string,
+            email:string;
+            dataNascimento:string;
+            id: number;
+            senha: string;
+        }
+        let listaUsers: Array<UserProps> = JSON.parse(localStorage.getItem('listaUsers') || '[]');
+        
+
+        //const idList: Array<number> = listaUsers.map(user => user.id);
+      
+
+        let id: number = listaUsers.length == 0 ? 1 : listaUsers[listaUsers.length - 1].id+1;
+        
         listaUsers.push({
             nome: name,
             email: email,
             dataNascimento: dataNascimento,
-            senha: password
+            senha: password,
+            id: id
         })
-
         localStorage.setItem('listaUsers', JSON.stringify(listaUsers));
-
+        
+        console.log(listaUsers.length);
     }
+
 
     return (
         <div className="container-form">

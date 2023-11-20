@@ -6,7 +6,7 @@ interface buttonProps{
 
 }
 function handleClick(){
-    console.log('asdas');
+    //console.log('asdas');
 }
 
 export default function Button(props: buttonProps) {
