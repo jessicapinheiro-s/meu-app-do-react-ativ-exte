@@ -2,12 +2,8 @@ import { useState } from "react";
 import logo from '../../imgs/logo.svg';
 import '../../styles/style.css';
 import Button from '../buttons/button';
-import MenuHeader from "../header/header";
 
 export default function FormularioLogin(props: any) {
-    //Definindo Estado
-    let eventLocalStorage: string = '';
-    let form: string = '';
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -15,25 +11,22 @@ export default function FormularioLogin(props: any) {
     //função que irá retornar algo
     const handleCadastro = (event: any) => {
         event.preventDefault();
-        event = 'Cadastro';
-        eventLocalStorage = 'Criar';
 
-        console.log({
+        const info = {
             email,
             password
-        });
+        }
+
+        tratandoDados(info);
     }
 
     //função para criar, obter e remover dados do localStorage 
-    const useLocalStorage = (event: string, valor: any, chave: string) => {
-        if (event == 'Criar') {
-            localStorage.setItem(chave, valor);
-        } else if (event == 'Atualizar') {
-            localStorage.getItem(chave);
-        } else {
-            localStorage.removeItem(chave);
-        }
+        
+    function tratandoDados (userInfo:object) {
+        let listaUsers: Array<object> = JSON.parse(localStorage.getItem('listaUsers') || '[]');  
+
     }
+    
 
     return (
         <div className="container-form">

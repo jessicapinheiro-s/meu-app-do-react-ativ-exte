@@ -27,17 +27,22 @@ export default function Formulario(props: any) {
             password,
             dataNascimento
         });
+        tratandoDados();
     }
 
     //função para criar, obter e remover dados do localStorage 
-    const useLocalStorage = (event: string, valor: any, chave: string) => {
-        if (event == 'Criar') {
-            localStorage.setItem(chave, valor);
-        } else if (event == 'Atualizar') {
-            localStorage.getItem(chave);
-        } else {
-            localStorage.removeItem(chave);
-        }
+    function tratandoDados ()  {
+        let listaUsers: Array<object> = JSON.parse(localStorage.getItem('listaUsers') || '[]');
+
+        listaUsers.push({
+            nome: name,
+            email: email,
+            dataNascimento: dataNascimento,
+            senha: password
+        })
+
+        localStorage.setItem('listaUsers', JSON.stringify(listaUsers));
+
     }
 
     return (
