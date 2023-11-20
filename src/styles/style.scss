@@ -22,5 +22,12 @@
 #root{
     width: 100%;
 }
+@media (max-width: 500px){
+    .container-meu-perfil,
+    .modal-bg
+    {
+        width: 400px;
+    }
+}
 
 

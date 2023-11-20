@@ -18,10 +18,19 @@
 .container-header .nav-menu-header ul {
   list-style: none;
   justify-content: space-between;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
   list-style: none;
+}
+@media screen and (max-width: 500px) {
+  .container-header .nav-menu-header ul {
+    display: block;
+  }
+}
+@media screen and (min-width: 500px) {
+  .container-header .nav-menu-header ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
 }
 .container-header .nav-menu-header ul a {
   text-decoration: none;
@@ -196,4 +205,11 @@ body {
 
 #root {
   width: 100%;
+}
+
+@media (max-width: 500px) {
+  .container-meu-perfil,
+  .modal-bg {
+    width: 400px;
+  }
 }/*# sourceMappingURL=style.css.map */
