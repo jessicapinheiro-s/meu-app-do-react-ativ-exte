@@ -159,6 +159,7 @@ body {
   padding: 10px 15px;
   border: none;
   font-size: 1rem;
+  color: white;
   background-color: #8ECDDD;
 }
 .container-buttons .button-login:hover {

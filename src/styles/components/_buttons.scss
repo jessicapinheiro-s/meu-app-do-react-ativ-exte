@@ -18,6 +18,7 @@
     }
     .button-login {
         @include buttonTam();
+        color: white;
         background-color: $cor-terciaria;
 
         &:hover {
