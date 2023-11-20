@@ -2,17 +2,14 @@ import { useState } from "react";
 import logo from '../../imgs/logo.svg';
 import '../../styles/style.css';
 import Button from '../buttons/button';
-import Cadastro from "../../Pages/cadastro";
-import { Link } from 'react-router-dom';
+import MenuHeader from "../header/header";
 
-export default function Formulario(props: any) {
+export default function FormularioLogin(props: any) {
     //Definindo Estado
-    let eventLocalStorage:string = '';
-    let form:string = '';
+    let eventLocalStorage: string = '';
+    let form: string = '';
 
-    const [name, setName] = useState('');
     const [email, setEmail] = useState('');
-    const [dataNascimento, setDataNascimento] = useState('');
     const [password, setPassword] = useState('');
 
     //função que irá retornar algo
@@ -20,12 +17,10 @@ export default function Formulario(props: any) {
         event.preventDefault();
         event = 'Cadastro';
         eventLocalStorage = 'Criar';
-        
+
         console.log({
-            name,
             email,
-            password,
-            dataNascimento
+            password
         });
     }
 
@@ -48,26 +43,12 @@ export default function Formulario(props: any) {
                 </div>
                 <div className='inputs-login-form'>
                     <input
-                        type="text"
-                        id='inNome'
-                        placeholder='Nome'
-                        required
-                        value={name}
-                        onChange={(event) => setName(event.target.value)} />
-                    <input
                         type="email"
                         id='inEmail'
                         placeholder='Email'
                         required
                         value={email}
                         onChange={(event) => setEmail(event.target.value)} />
-                    <input
-                        type="date"
-                        id='inDataNasc'
-                        placeholder='Data de Nascimento'
-                        required
-                        value={dataNascimento}
-                        onChange={(event) => setDataNascimento(event.target.value)} />
                     <input
                         type="password"
                         id='inSenha'
@@ -77,10 +58,9 @@ export default function Formulario(props: any) {
                         onChange={(event) => setPassword(event.target.value)} />
                 </div>
                 <div className='container-buttons'>
-                    <Button className='button-cadastrar'>
-                        Cadastrar
+                    <Button className="button-login">
+                        Login
                     </Button>
-                    <p><Link to='/login'></Link>Login</p>
                 </div>
             </form>
         </div>

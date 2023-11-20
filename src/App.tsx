@@ -5,6 +5,7 @@ import Dashboard from './Pages/dashboard';
 import MeuPerfil from './Pages/meuPerfil';
 import MeuProgresso from './Pages/meuProgresso';
 import Cadastro from './Pages/cadastro'
+import Login from './Pages/login'
 import './styles/style.css';
 
 
@@ -15,6 +16,7 @@ function App() {
       <Route path='/dashboard' element={<Dashboard/>} />
       <Route path='/meuPerfil' element={<MeuPerfil nome = 'jessica'/>} />
       <Route path='/meuProgresso' element={<MeuProgresso/>} />
+      <Route path='/login' element={<Login/>} />
     </Routes>
   );
 }

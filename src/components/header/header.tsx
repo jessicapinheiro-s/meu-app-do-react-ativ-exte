@@ -22,7 +22,10 @@ export default function MenuHeader(props: any) {
                         <Link to='/meuPerfil'>Meu Perfil</Link>
                     </li>
                     <li>
-                        <Link to='/meuProgresso'>Meu progresso</Link>
+                        <Link to='/meuProgresso'>Meu Progresso</Link>
+                    </li>
+                    <li>
+                        <Link to='/meuPerfil'>Meu Perfil</Link>
                     </li>
                 </ul>
             </nav>

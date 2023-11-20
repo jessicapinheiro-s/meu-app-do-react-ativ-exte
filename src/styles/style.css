@@ -190,11 +190,4 @@ body {
 
 #root {
   width: 100%;
-}
-
-@media only screen and (max-width: 768px) {
-  .modal-bg,
-  .container-meu-perfil {
-    width: 400px;
-  }
 }/*# sourceMappingURL=style.css.map */
