@@ -80,7 +80,7 @@ export default function Formulario(props: any) {
                     <Button className='button-cadastrar'>
                         Cadastrar
                     </Button>
-                    <p><Link to='/login'></Link>Login</p>
+                    <p><Link to='/login'>Login</Link></p>
                 </div>
             </form>
         </div>
