@@ -21,7 +21,6 @@ export default function Formulario() {
 
     //função para criar, obter e remover dados do localStorage 
     function tratandoDados() {
-
         interface UserProps{
             nome: string,
             email:string;
@@ -30,23 +29,20 @@ export default function Formulario() {
             senha: string;
         }
         let listaUsers: Array<UserProps> = JSON.parse(localStorage.getItem('listaUsers') || '[]');
-        
 
         //const idList: Array<number> = listaUsers.map(user => user.id);
       
-
         let id: number = listaUsers.length == 0 ? 1 : listaUsers[listaUsers.length - 1].id+1;
         
         listaUsers.push({
-            nome: name,
-            email: email,
+            nome: name.toLocaleLowerCase().trimEnd().trimStart(),
+            email: email.toLocaleLowerCase().trimEnd().trimStart(),
             dataNascimento: dataNascimento,
-            senha: password,
+            senha: password.toLocaleLowerCase(),
             id: id
         })
         localStorage.setItem('listaUsers', JSON.stringify(listaUsers));
         
-        console.log(listaUsers.length);
     }
 
 
