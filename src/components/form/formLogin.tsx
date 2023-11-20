@@ -21,12 +21,37 @@ export default function FormularioLogin(props: any) {
     }
 
     //função para criar, obter e remover dados do localStorage 
-        
-    function tratandoDados (userInfo:object) {
-        let listaUsers: Array<object> = JSON.parse(localStorage.getItem('listaUsers') || '[]');  
 
+    function tratandoDados(userInfo: object) {
+        const listaUsers: Array<UserProps> = JSON.parse(localStorage.getItem('listaUsers') || '[]');
+        console.log({ userInfo, listaUsers });
+        interface UserProps {
+            nome: string,
+            email: string;
+            dataNascimento: string;
+            id: number;
+            password: string;
+        }
+
+        const infoTipada: {
+            email: string;
+            password: string;
+        }
+            = userInfo as {
+                email: string;
+                password: string;
+            };
+
+        let existe = listaUsers.filter(f => f.email == infoTipada.email && f.password == infoTipada.password);
+        
+        if(existe){
+            console.log('User existe');
+        }else{
+            console.log('User não existe');
+        }
+        
     }
-    
+
 
     return (
         <div className="container-form">

@@ -26,7 +26,7 @@ export default function Formulario() {
             email:string;
             dataNascimento:string;
             id: number;
-            senha: string;
+            password: string;
         }
         let listaUsers: Array<UserProps> = JSON.parse(localStorage.getItem('listaUsers') || '[]');
 
@@ -38,7 +38,7 @@ export default function Formulario() {
             nome: name.toLocaleLowerCase().trimEnd().trimStart(),
             email: email.toLocaleLowerCase().trimEnd().trimStart(),
             dataNascimento: dataNascimento,
-            senha: password.toLocaleLowerCase(),
+            password: password.toLocaleLowerCase(),
             id: id
         })
         localStorage.setItem('listaUsers', JSON.stringify(listaUsers));
