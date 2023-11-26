@@ -14,9 +14,11 @@ export default function Dashboard() {
 
     const [iconItem, setIconItem] = useState('');
 
-    function answer() {
+    const answer = () => {
         console.log('respondido')
     }
+
+
     return (
         <div>
             <MenuHeader nome='Jéssica' />
@@ -37,7 +39,7 @@ export default function Dashboard() {
                     <FcCompactCamera className='icon' />
                 </Card>
                 <div className='container-button'>
-                <Button className='buttonChoiceReponse' onClick={answer}>Continuar</Button>
+                    <Button className='buttonChoiceReponse' onClick={() => { answer() }}>Continuar</Button>
                 </div>
             </div>
         </div>

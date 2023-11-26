@@ -5,14 +5,11 @@ interface buttonProps{
     onClick?:() => void;
 
 }
-function handleClick(){
-    //console.log('asdas');
-}
 
 export default function Button(props: buttonProps) {
     return (
        <button 
-        onClick={()=> {handleClick()}} 
+        onClick={props.onClick} 
         className={props.className}>
         {props.children}
         </button>
