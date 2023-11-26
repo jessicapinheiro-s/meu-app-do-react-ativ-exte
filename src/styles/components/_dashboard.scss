@@ -3,13 +3,15 @@
 
 
 .container-dash {
-    width: 300px;
+    width: 400px;
     padding: 15px 30px ;
+    border-radius: 10px;
+    text-align: center;
     margin: 0 auto;
-    border: 1px solid rgb(223, 223, 223);
+    border: 1px solid $cor-borda;
     display: grid;
     grid-gap: 20px;
-    grid-template-columns: 150px 150px;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 150px 150px;
     grid-template-areas: 
     'title title'
@@ -27,10 +29,24 @@
     }
 }
 .card{
-    border: 1px solid grey;
-    margin: 0 auto;
+    width: 150px;
+    border-radius: 10px;
+    border: 1px solid $cor-borda ;
+    
     display: flex;
     align-items: center;
     justify-content: center;
     
+    &:hover{
+        transition: all 0.5s;
+        transform: scale(1.1);
+    }
+
+    &:active{
+        background-color: $cor-terciaria;
+        outline: none;
+    }
+    .icon{
+        font-size: 40px;
+    }
 }

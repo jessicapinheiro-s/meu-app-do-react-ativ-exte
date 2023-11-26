@@ -71,20 +71,22 @@ body {
   outline: none;
   padding: 10px;
   margin: 10px 0px;
-  border-bottom: 3px solid rgba(245, 245, 245, 0.6588235294);
+  border-bottom: 3px solid rgba(224, 224, 224, 0.7137254902);
 }
 .modal-bg .inputs-login-form input:focus {
   border-bottom: 3px solid #22668D;
 }
 
 .container-dash {
-  width: 300px;
+  width: 400px;
   padding: 15px 30px;
+  border-radius: 10px;
+  text-align: center;
   margin: 0 auto;
-  border: 1px solid rgb(223, 223, 223);
+  border: 1px solid rgba(224, 224, 224, 0.7137254902);
   display: grid;
   grid-gap: 20px;
-  grid-template-columns: 150px 150px;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 150px 150px;
   grid-template-areas: "title title" "card card" "card card";
 }
@@ -99,11 +101,23 @@ body {
 }
 
 .card {
-  border: 1px solid grey;
-  margin: 0 auto;
+  width: 150px;
+  border-radius: 10px;
+  border: 1px solid rgba(224, 224, 224, 0.7137254902);
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.card:hover {
+  transition: all 0.5s;
+  transform: scale(1.1);
+}
+.card:active {
+  background-color: #8ECDDD;
+  outline: none;
+}
+.card .icon {
+  font-size: 40px;
 }
 
 .container-meu-perfil {

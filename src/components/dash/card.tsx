@@ -1,15 +1,16 @@
 import React from "react";
 
 interface propsCard{
-    src:string;
-
+    children?: React.ReactNode;
+  
 }
 
-export default function Card (props:propsCard){
+
+export function Card (props: propsCard){
     
     return(
         <div className="card">
-            <img src={props.src} alt="sdfsdfsdfsd" className="card-img"/>
+            {props.children}
         </div>
     ) 
 }
