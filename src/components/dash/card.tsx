@@ -8,9 +8,8 @@ interface propsCard{
 export default function Card (props:propsCard){
     
     return(
-        <div className="container-img">
-            <img src={props.src} alt="sdfsdfsdfsd" className="card"/>
-            sdsads
+        <div className="card">
+            <img src={props.src} alt="sdfsdfsdfsd" className="card-img"/>
         </div>
     ) 
 }
