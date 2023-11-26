@@ -79,25 +79,23 @@ body {
 
 .container-dash {
   width: 400px;
-  padding: 15px 30px;
   border-radius: 10px;
   text-align: center;
+  padding: 15px;
   margin: 0 auto;
   border: 1px solid rgba(224, 224, 224, 0.7137254902);
   display: grid;
   grid-gap: 20px;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 150px 150px;
-  grid-template-areas: "title title" "card card" "card card";
+  grid-template-rows: 1fr 150px 150px 1fr;
+  grid-template-areas: "title title" "card card" "card card" "button button";
 }
 .container-dash .card-img {
   grid-area: card;
-  border: 1px solid red;
 }
 .container-dash .title {
+  width: 100%;
   grid-area: title;
-  padding: 10px;
-  text-align: center;
 }
 
 .card {
@@ -118,6 +116,19 @@ body {
 }
 .card .icon {
   font-size: 40px;
+}
+
+.container-button {
+  grid-area: button;
+}
+.container-button .buttonChoiceReponse {
+  width: 100%;
+  background-color: #01ac01;
+  color: #ffffff;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  padding: 20px 30px;
 }
 
 .container-meu-perfil {
@@ -221,7 +232,7 @@ body {
   border: none;
   font-size: 1rem;
   color: white;
-  background-color: red;
+  background-color: #ff0000;
 }
 .buttonExcluir:hover {
   background-color: #970000;
@@ -248,6 +259,9 @@ body {
   .container-meu-perfil,
   .modal-bg {
     width: 400px;
+  }
+  .container-dash {
+    width: 350px;
   }
   .nav-menu-header {
     justify-content: right;
