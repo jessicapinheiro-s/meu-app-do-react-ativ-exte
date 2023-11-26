@@ -23,21 +23,26 @@ export default function Dashboard() {
     return (
         <div>
             <MenuHeader nome='Jéssica' />
+            <div className='title'>
+                <h1>Qual dessas opções representa uma Camera em Libras?</h1>
+            </div>
             <div className='container-dash'>
-                <div className='title'>
-                    <h1>Nome item</h1>
-                </div>
+
                 <Card>
                     <FcSearch className='icon' />
+                    <p>Magnifying glass</p>
                 </Card>
                 <Card>
                     <FcShop className='icon' />
+                    <p>Store</p>
                 </Card>
                 <Card>
                     <FcInTransit className='icon' />
+                    <p>Delivery</p>
                 </Card>
                 <Card>
                     <FcCompactCamera className='icon' />
+                    <p>Camera</p>
                 </Card>
                 <div className='container-button'>
                     <Button className='buttonChoiceReponse' onClick={() => { answer() }}>Continuar</Button>

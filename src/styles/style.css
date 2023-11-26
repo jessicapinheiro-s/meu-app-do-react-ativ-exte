@@ -77,6 +77,23 @@ body {
   border-bottom: 3px solid #22668D;
 }
 
+.title {
+  width: 100%;
+  grid-area: title;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #22668D;
+  padding: 20px 30px;
+  border-radius: 10px;
+  width: 60%;
+  margin: 20px auto;
+}
+.title h1 {
+  color: #ffffff;
+  font-weight: 500;
+}
+
 .container-dash {
   width: 400px;
   border-radius: 10px;
@@ -87,18 +104,11 @@ body {
   display: grid;
   grid-gap: 20px;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 30px 150px 150px 1fr;
-  grid-template-areas: "title title" "card card" "card card" "button button";
+  grid-template-rows: 150px 150px 1fr;
+  grid-template-areas: "card card" "card card" "button button";
 }
 .container-dash .card-img {
   grid-area: card;
-}
-.container-dash .title {
-  width: 100%;
-  grid-area: title;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 .container-dash .card {
   width: 100%;
@@ -107,6 +117,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+}
+.container-dash .card p {
+  font-weight: 600;
+  margin: 5px;
 }
 .container-dash .card:hover {
   transition: all 0.5s;
@@ -117,7 +132,8 @@ body {
   outline: none;
 }
 .container-dash .card .icon {
-  font-size: 40px;
+  font-size: 50px;
+  margin: 5px;
 }
 .container-dash .container-button {
   grid-area: button;

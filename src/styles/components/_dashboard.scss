@@ -1,20 +1,36 @@
 @import '../abstract/mixins';
 @import '../abstract/variaves';
 
+.title {
+    width: 100%;
+    grid-area: title;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    h1{
+        color: $cor-fonte;
+        font-weight: 500;
+    }
+    background-color: $cor-secundaria;
+    padding: 20px 30px;
+    border-radius: 10px;
+    width: 60%;
+    margin: 20px auto;
+    
+}
 
 .container-dash {
     width: 400px;
     border-radius: 10px;
     text-align: center;
     padding: 15px;
-    margin: 30px  auto;
+    margin: 30px auto;
     border: 1px solid $cor-borda;
     display: grid;
     grid-gap: 20px;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 30px 150px 150px 1fr;
+    grid-template-rows:  150px 150px 1fr;
     grid-template-areas:
-        'title title'
         'card card'
         'card card'
         'button button';
@@ -24,15 +40,12 @@
 
     }
 
-    .title {
-        width: 100%;
-        grid-area: title;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
+    
     .card {
+       p{
+        font-weight: 600;
+        margin: 5px;
+       }
         width: 100%;
         border-radius: 10px;
         border: 1px solid $cor-borda ;
@@ -40,6 +53,8 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        flex-direction: column;
+        
 
         &:hover {
             transition: all 0.5s;
@@ -52,7 +67,8 @@
         }
 
         .icon {
-            font-size: 40px;
+            font-size: 50px;
+            margin: 5px;
         }
     }
 
