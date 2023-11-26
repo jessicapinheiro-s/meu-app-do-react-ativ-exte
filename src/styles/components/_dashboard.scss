@@ -1,2 +1,28 @@
 @import '../abstract/mixins';
 @import '../abstract/variaves';
+
+
+.container-dash {
+    width: 300px;
+    margin: 0 auto;
+    border: 1px solid rgb(223, 223, 223);
+    display: grid;
+    grid-template-columns: 100px 100px;
+    grid-template-rows: 60px 100px 100px;
+    grid-template-areas: 
+    'title title'
+    'card card'
+    'card card';
+
+    .card{
+        grid-area: card;
+        border: 1px solid red;
+    }
+    .title{
+        grid-area: title;
+    }
+}
+.container-img{
+    border: 1px solid grey;
+    margin: 0 auto;
+}

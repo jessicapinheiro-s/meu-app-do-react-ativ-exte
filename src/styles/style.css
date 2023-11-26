@@ -77,6 +77,28 @@ body {
   border-bottom: 3px solid #22668D;
 }
 
+.container-dash {
+  width: 300px;
+  margin: 0 auto;
+  border: 1px solid rgb(223, 223, 223);
+  display: grid;
+  grid-template-columns: 100px 100px;
+  grid-template-rows: 60px 100px 100px;
+  grid-template-areas: "title title" "card card" "card card";
+}
+.container-dash .card {
+  grid-area: card;
+  border: 1px solid red;
+}
+.container-dash .title {
+  grid-area: title;
+}
+
+.container-img {
+  border: 1px solid grey;
+  margin: 0 auto;
+}
+
 .container-meu-perfil {
   width: 500px;
   border-radius: 10px;
