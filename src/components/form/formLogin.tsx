@@ -7,6 +7,11 @@ export default function FormularioLogin(props: any) {
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const limparCampo = () => {
+        setEmail('');
+        setPassword('');
+    }
+
 
     //função que irá retornar algo
     const handleCadastro = (event: any) => {
@@ -18,6 +23,7 @@ export default function FormularioLogin(props: any) {
         }
 
         tratandoDados(info);
+        limparCampo();
     }
 
     //função para criar, obter e remover dados do localStorage 

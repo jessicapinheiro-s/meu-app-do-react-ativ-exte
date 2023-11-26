@@ -74,7 +74,7 @@
 }
 .title h1 {
   color: #000000;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .container-dash {
@@ -117,22 +117,6 @@
 .container-dash .card .icon {
   font-size: 50px;
   margin: 5px;
-}
-.container-dash .container-button {
-  grid-area: button;
-}
-.container-dash .container-button .buttonChoiceReponse {
-  width: 100%;
-  background-color: #01ac01;
-  color: #ffffff;
-  outline: none;
-  border: none;
-  border-radius: 10px;
-  padding: 20px 30px;
-}
-.container-dash .container-button .buttonChoiceReponse:hover {
-  background-color: #00c500;
-  transition: all 1s;
 }
 
 .container-meu-perfil {
@@ -243,6 +227,23 @@
   transition: all 0.5s;
 }
 
+.container-button {
+  grid-area: button;
+}
+.container-button .buttonChoiceReponse {
+  width: 100%;
+  background-color: #01ac01;
+  color: #ffffff;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  padding: 20px 30px;
+}
+.container-button .buttonChoiceReponse:hover {
+  background-color: #00c500;
+  transition: all 1s;
+}
+
 .inputs-login-form {
   display: flex;
   flex-direction: column;
@@ -311,11 +312,11 @@
   .nav-menu-header.active ul li {
     text-align: right;
     padding: 10px 15px;
-    margin: 5px 0px;
-    border-radius: 10px;
+    border-radius: 8px;
   }
   .nav-menu-header.active ul li:hover {
     background-color: #FFCC70;
+    transition: all 1s;
   }
   .nav-menu-header.active ul li a {
     color: #000000;

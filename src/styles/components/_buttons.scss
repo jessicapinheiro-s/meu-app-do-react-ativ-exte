@@ -38,3 +38,23 @@
         transition: all 0.5s;
     }
 }
+
+.container-button {
+    grid-area: button;
+
+    .buttonChoiceReponse {
+        width: 100%;
+        background-color: $cor-green;
+        color: $cor-fonte;
+        outline: none;
+        border: none;
+        border-radius: 10px;
+        padding: 20px 30px;
+
+        &:hover {
+            background-color: $cor-green-light;
+            transition: all 1s;
+        }
+    }
+
+}

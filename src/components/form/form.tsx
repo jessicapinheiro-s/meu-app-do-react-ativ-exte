@@ -18,6 +18,12 @@ export default function Formulario() {
         tratandoDados();
 
     }
+    const limparCampo = () => {
+        setName('');
+        setEmail('');
+        setDataNascimento('');
+        setPassword('');
+    }
 
     //função para criar, obter e remover dados do localStorage 
     function tratandoDados() {
@@ -42,7 +48,8 @@ export default function Formulario() {
             id: id
         })
         localStorage.setItem('listaUsers', JSON.stringify(listaUsers));
-        alert('Sua conta foi criada com sucesso!')
+        alert('Sua conta foi criada com sucesso!');
+        limparCampo();
     }
 
 
