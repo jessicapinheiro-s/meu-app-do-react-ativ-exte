@@ -8,26 +8,72 @@
 
 
 
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1rem;
+    border: 1px solid red;
 }
-.container-geral{
+
+.container-geral {
     width: 100%;
     box-sizing: border-box;
 }
 
-#root{
+#root {
     width: 100%;
 }
-@media (max-width: 500px){
+
+@media (max-width: 700px) {
+
     .container-meu-perfil,
-    .modal-bg
-    {
+    .modal-bg {
         width: 400px;
     }
-}
+
+    .icon-menu {
+        text-align: right;
+    }
+
+    .nav-menu-header {
+        justify-content: right;
+        display: flex;
+        ul {
+            z-index: 1;
+            position: absolute;
+            top: 75px;
+            right: 0;
+
+            background-color: #ffffff;
+
+            li {
+                text-align: right;
+                padding: 10px 15px;
+                margin: 5px 0px;
+
+                &:hover {
+                    background-color: $cor-principal;
+                }
+
+                border-radius: 10px;
+            }
+
+            //display: none;
+            width: 80%;
+            border:1px solid #dddddd98;
+
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
 
 
+    }
+
+    @media screen and (min-width: 700px) {
+        .icon-menu {
+            display: none;
+        }
+    }
+
+}  

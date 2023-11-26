@@ -2,8 +2,18 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../imgs/logo.svg';
 import '../../styles/style.css';
+import { MdOutlineMenu } from "react-icons/md";
+interface buttonProps {
+    onClick?: () => void;
+    nome:string;
+}
+export default function MenuHeader(props: buttonProps) {
 
-export default function MenuHeader(props: any) {
+    function handleClick() {
+        //console.log('asdas');
+        <MdOutlineMenu className='with'/>
+    }
+
     return (
         <header className='container-header'>
             <div id='logo-header'>
@@ -11,6 +21,7 @@ export default function MenuHeader(props: any) {
             </div>
             <p className='saudacoes'>Olá! {props.nome}</p>
             <nav className='nav-menu-header'>
+                <MdOutlineMenu className='icon-menu' onClick={() => { handleClick() }}/>
                 <ul>
                     <li>
                         <Link to='/'>Cadastro</Link>

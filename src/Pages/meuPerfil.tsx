@@ -18,7 +18,7 @@ interface MeuPerfilProps {
 export default function MeuPerfil(props: MeuPerfilProps) {
     return (
         <div>
-            <MenuHeader />
+            <MenuHeader nome = 'Jéssica'/>
             <div className='container-meu-perfil'>
                 <div className='Title'>
                     <h1>Olá, {props.nome}</h1>

@@ -20,12 +20,12 @@
   justify-content: space-between;
   list-style: none;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 700px) {
   .container-header .nav-menu-header ul {
     display: block;
   }
 }
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 700px) {
   .container-header .nav-menu-header ul {
     display: flex;
     justify-content: space-around;
@@ -196,6 +196,7 @@ body {
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1rem;
+  border: 1px solid red;
 }
 
 .container-geral {
@@ -207,9 +208,41 @@ body {
   width: 100%;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 700px) {
   .container-meu-perfil,
   .modal-bg {
     width: 400px;
+  }
+  .icon-menu {
+    text-align: right;
+  }
+  .nav-menu-header {
+    justify-content: right;
+    display: flex;
+  }
+  .nav-menu-header ul {
+    z-index: 1;
+    position: absolute;
+    top: 75px;
+    right: 0;
+    background-color: #ffffff;
+    width: 80%;
+    border: 1px solid rgba(221, 221, 221, 0.5960784314);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+  .nav-menu-header ul li {
+    text-align: right;
+    padding: 10px 15px;
+    margin: 5px 0px;
+    border-radius: 10px;
+  }
+  .nav-menu-header ul li:hover {
+    background-color: #FFCC70;
+  }
+}
+@media screen and (max-width: 700px) and (min-width: 700px) {
+  .icon-menu {
+    display: none;
   }
 }/*# sourceMappingURL=style.css.map */
