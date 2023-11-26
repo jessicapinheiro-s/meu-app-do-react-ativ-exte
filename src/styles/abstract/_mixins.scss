@@ -21,19 +21,10 @@
 }
 
 @mixin alinhamentoFlexMenuHeader {
-    @media screen and (max-width: 700px) {
-        display: block;
-    } 
-
 
     @media screen and (min-width: 700px) {
         display: flex;
         justify-content: space-around;
         align-items: center;
-        
-        
-        
     }
-        
-   
 }

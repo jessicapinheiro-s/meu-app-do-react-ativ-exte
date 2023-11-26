@@ -17,8 +17,9 @@
 
     .nav-menu-header {
         width: 33%;
-
+        
         ul {
+            
             list-style: none;
             justify-content: space-between;
             @include alinhamentoFlexMenuHeader();

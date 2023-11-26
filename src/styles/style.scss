@@ -13,7 +13,6 @@
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1rem;
-    border: 1px solid red;
 }
 
 .container-geral {
@@ -32,50 +31,61 @@
         width: 400px;
     }
 
-    .icon-menu {
-        text-align: right;
-        font-size: 30px;
-        padding: 10px;
-    }
+    
+
 
     .nav-menu-header {
-        justify-content: right;
-        display: flex;
         ul {
-            z-index: 1;
-            position: absolute;
-            top: 75px;
-            right: 0;
-
-            background-color: #ffffff;
-
-            li {
-                text-align: right;
-                padding: 10px 15px;
-                margin: 5px 0px;
-
-                &:hover {
-                    background-color: $cor-principal;
-                }
-
-                border-radius: 10px;
-            }
-
-            //display: none;
-            width: 80%;
-            border:1px solid #dddddd98;
-
-            border-top-left-radius: 10px;
-            border-bottom-left-radius: 10px;
-        }
-
-
-    }
-
-    @media screen and (min-width: 700px) {
-        .icon-menu {
             display: none;
         }
+        justify-content: right;
+        display: flex;
+        width: 100%;
+
+        .icon-menu {
+            display: block;
+            font-size: 30px;
+            padding: 10px;
+        }
+
+        &.active {
+            ul {
+                display: block;
+                z-index: 1;
+                position: absolute;
+                top: 75px;
+                right: 0;
+                
+
+                background-color: #ffffff;
+
+                li {
+                    text-align: right;
+                    padding: 10px 15px;
+                    margin: 5px 0px;
+
+                    &:hover {
+                        background-color: $cor-principal;
+                    }
+
+                    border-radius: 10px;
+                }
+
+                //display: none;
+                width: 60%;
+                border:1px solid #dddddd98;
+
+                border-top-left-radius: 10px;
+                border-bottom-left-radius: 10px;
+            }
+        }
     }
 
-}  
+
+}
+
+@media screen and (min-width: 700px) {
+    .icon-menu {
+        display: none;
+    }
+}
