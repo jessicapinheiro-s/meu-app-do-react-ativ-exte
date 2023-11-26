@@ -101,7 +101,7 @@ body {
 }
 
 .card {
-  width: 150px;
+  width: 100%;
   border-radius: 10px;
   border: 1px solid rgba(224, 224, 224, 0.7137254902);
   display: flex;
