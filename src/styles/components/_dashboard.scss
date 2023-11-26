@@ -2,17 +2,17 @@
 @import '../abstract/variaves';
 
 .title {
-    width: 100%;
+    width: 80%;
     grid-area: title;
     display: flex;
     align-items: center;
     justify-content: center;
     h1{
-        color: $cor-fonte;
+        color: $cor-fonte-secundaria;
         font-weight: 500;
     }
-    background-color: $cor-secundaria;
-    padding: 20px 30px;
+    background-color: $cor-principal;
+    padding: 40px 30px;
     border-radius: 10px;
     width: 60%;
     margin: 20px auto;
@@ -20,7 +20,7 @@
 }
 
 .container-dash {
-    width: 400px;
+    width: 60%;
     border-radius: 10px;
     text-align: center;
     padding: 15px;

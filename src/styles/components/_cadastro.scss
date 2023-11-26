@@ -2,10 +2,6 @@
 @import '../abstract/variaves';
 
 
-body {
-    background-color: white;
-}
-
 .modal-bg {
     box-sizing: border-box;
     box-shadow: 2px 3px 5px 3px rgba(219, 219, 219, 0.39);
@@ -24,27 +20,5 @@ body {
             width: 100px;
         }
     }
-
-    .inputs-login-form {
-        display: flex;
-        flex-direction: column;
-
-        input {
-            border: none;
-            outline: none;
-            padding: 10px;
-            margin: 10px 0px;
-            border-bottom: 3px solid $cor-borda;
-
-            &:focus {
-                border-bottom: 3px solid $cor-secundaria;
-
-            }
-        }
-
-
-    }
-
-    
 
 }

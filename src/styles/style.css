@@ -3,7 +3,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #FFCC70;
+  background-color: #8ECDDD;
   width: 100%;
 }
 .container-header #logo-header {
@@ -29,17 +29,14 @@
 }
 .container-header .nav-menu-header ul a {
   text-decoration: none;
-  color: black;
+  color: #ffffff;
 }
 .container-header .saudacoes {
   width: 33%;
   text-align: center;
   padding: 0px 20px;
   word-wrap: break-word;
-}
-
-body {
-  background-color: white;
+  color: #ffffff;
 }
 
 .modal-bg {
@@ -62,40 +59,26 @@ body {
 .modal-bg .logo-cadastro img {
   width: 100px;
 }
-.modal-bg .inputs-login-form {
-  display: flex;
-  flex-direction: column;
-}
-.modal-bg .inputs-login-form input {
-  border: none;
-  outline: none;
-  padding: 10px;
-  margin: 10px 0px;
-  border-bottom: 3px solid rgba(224, 224, 224, 0.7137254902);
-}
-.modal-bg .inputs-login-form input:focus {
-  border-bottom: 3px solid #22668D;
-}
 
 .title {
-  width: 100%;
+  width: 80%;
   grid-area: title;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #22668D;
-  padding: 20px 30px;
+  background-color: #FFCC70;
+  padding: 40px 30px;
   border-radius: 10px;
   width: 60%;
   margin: 20px auto;
 }
 .title h1 {
-  color: #ffffff;
+  color: #000000;
   font-weight: 500;
 }
 
 .container-dash {
-  width: 400px;
+  width: 60%;
   border-radius: 10px;
   text-align: center;
   padding: 15px;
@@ -224,7 +207,7 @@ body {
   border: none;
   font-size: 1rem;
   background-color: #8ECDDD;
-  color: white;
+  color: #ffffff;
 }
 .container-buttons .button-cadastrar:hover {
   background-color: #22668D;
@@ -237,7 +220,7 @@ body {
   padding: 10px 15px;
   border: none;
   font-size: 1rem;
-  color: white;
+  color: #ffffff;
   background-color: #8ECDDD;
 }
 .container-buttons .button-login:hover {
@@ -258,6 +241,21 @@ body {
 .buttonExcluir:hover {
   background-color: #970000;
   transition: all 0.5s;
+}
+
+.inputs-login-form {
+  display: flex;
+  flex-direction: column;
+}
+.inputs-login-form input {
+  border: none;
+  outline: none;
+  padding: 10px;
+  margin: 10px 0px;
+  border-bottom: 3px solid rgba(224, 224, 224, 0.7137254902);
+}
+.inputs-login-form input:focus {
+  border-bottom: 3px solid #22668D;
 }
 
 * {
@@ -296,6 +294,7 @@ body {
     display: block;
     font-size: 30px;
     padding: 10px;
+    color: #ffffff;
   }
   .nav-menu-header.active ul {
     display: block;
@@ -317,6 +316,9 @@ body {
   }
   .nav-menu-header.active ul li:hover {
     background-color: #FFCC70;
+  }
+  .nav-menu-header.active ul li a {
+    color: #000000;
   }
 }
 @media screen and (min-width: 700px) {

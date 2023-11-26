@@ -35,8 +35,6 @@
         width: 350px;
     }
 
-
-
     .nav-menu-header {
         ul {
             display: none;
@@ -50,6 +48,7 @@
             display: block;
             font-size: 30px;
             padding: 10px;
+            color: $cor-fonte;
         }
 
         &.active {
@@ -59,8 +58,6 @@
                 position: absolute;
                 top: 75px;
                 right: 0;
-
-
                 background-color: #ffffff;
 
                 li {
@@ -73,6 +70,10 @@
                     }
 
                     border-radius: 10px;
+
+                    a {
+                        color: $cor-fonte-secundaria;
+                    }
                 }
 
                 //display: none;

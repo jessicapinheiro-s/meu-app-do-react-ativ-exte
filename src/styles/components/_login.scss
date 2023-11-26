@@ -1,2 +1,22 @@
 @import '../abstract/mixins';
 @import '../abstract/variaves';
+
+.inputs-login-form {
+    display: flex;
+    flex-direction: column;
+
+    input {
+        border: none;
+        outline: none;
+        padding: 10px;
+        margin: 10px 0px;
+        border-bottom: 3px solid $cor-borda;
+
+        &:focus {
+            border-bottom: 3px solid $cor-secundaria;
+
+        }
+    }
+
+
+}

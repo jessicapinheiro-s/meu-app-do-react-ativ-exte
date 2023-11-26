@@ -4,7 +4,7 @@
 
 .container-header {
     @include alinhamentoFlex();
-    background-color: $cor-principal;
+    background-color:$cor-terciaria;
     width: 100%;
 
     #logo-header {
@@ -28,7 +28,7 @@
 
             a {
                 text-decoration: none;
-                color: black;
+                color: $cor-fonte;
             }
         }
     }
@@ -38,7 +38,7 @@
         text-align: center;
         padding: 0px 20px;
         word-wrap: break-word;
-
+        color: $cor-fonte;
     }
 
     
