@@ -35,9 +35,6 @@ export default function MenuHeader(props: buttonProps) {
                     <li>
                         <Link to='/meuProgresso'>Meu Progresso</Link>
                     </li>
-                    <li>
-                        <Link to='/meuPerfil'>Meu Perfil</Link>
-                    </li>
                 </ul>
             </nav>
         </header>
