@@ -16,6 +16,7 @@ export default function Dashboard() {
 
     const answer = () => {
         console.log('respondido')
+        alert('Sua resposta foi armazenada')
     }
 
 

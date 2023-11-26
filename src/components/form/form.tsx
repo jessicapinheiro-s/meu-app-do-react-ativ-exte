@@ -42,7 +42,7 @@ export default function Formulario() {
             id: id
         })
         localStorage.setItem('listaUsers', JSON.stringify(listaUsers));
-        
+        alert('Sua conta foi criada com sucesso!')
     }
 
 

@@ -46,8 +46,10 @@ export default function FormularioLogin(props: any) {
         
         if(existe){
             console.log('User existe');
+            alert('Bem-vindo!');
         }else{
             console.log('User não existe');
+            alert('Não encontramos nenhum usuário');
         }
         
     }

@@ -14,6 +14,11 @@ import Li from '../components/lista-item/li';
 interface MeuPerfilProps {
     nome: string;
 }
+const excluirPerfil = () => {
+    console.log('IsOpen');
+    alert('O seu perifl foi excluído!')
+}
+
 
 export default function MeuPerfil(props: MeuPerfilProps) {
     return (
@@ -42,7 +47,7 @@ export default function MeuPerfil(props: MeuPerfilProps) {
                             <Li className= 'li-meu-perfil-info' icon={<MdOutlinePassword />}title='celular@' />
                         </ul>
                     </div>
-                    <Button className='buttonExcluir'>
+                    <Button className='buttonExcluir' onClick={() => { excluirPerfil() }} >
                         Excluir
                     </Button>
                 </div>
