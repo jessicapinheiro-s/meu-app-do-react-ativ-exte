@@ -71,7 +71,7 @@ export default function MeuProgresso() {
                     <button onClick={handleDecrement} disabled={progress === 0}>
                         -
                     </button>
-                    <div className='bar' >
+                    <div className='bar'style={{ width: '200px', margin: '0 10px' }} >
                         <div
                             style={{
                                 width: `${progress}%`,
