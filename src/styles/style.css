@@ -259,6 +259,45 @@
   border-bottom: 3px solid #22668D;
 }
 
+.container-progress {
+  width: 70%;
+  padding: 20px 30px;
+  border: 1px solid red;
+  margin: 50px auto;
+}
+.container-progress .container-item-progress {
+  display: flex;
+  width: 100%;
+  border: 1px solid red;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.container-progress .container-bar-progress {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  justify-content: space-between;
+  border: 1px solid red;
+  border-radius: 10px;
+  background-color: rgba(224, 224, 224, 0.7137254902);
+}
+.container-progress .container-medal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0px 15px 0px 15px;
+}
+.container-progress .container-medal .icon {
+  font-size: 50px;
+}
+
+.container-item-medal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 * {
   margin: 0;
   padding: 0;
