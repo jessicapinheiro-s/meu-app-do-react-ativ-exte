@@ -41,9 +41,9 @@ export default function MeuPerfil(props: MeuPerfilProps) {
                     </div>
                     <div className='Info-List'>
                         <ul>
-                            <Li className= 'li-meu-perfil-info'icon={<FaRegUser />} title='Jéssica Pinheiro Silva' />
-                            <Li className= 'li-meu-perfil-info' icon={<MdOutlineMail />}title='jessicasilva.js1314@gmail.com' />
-                            <Li className= 'li-meu-perfil-info' icon={<CiCalendarDate />}title='11/03/2002' />
+                            <Li className= 'li-meu-perfil-info'icon={<FaRegUser />} title='Jéssica Pinheiro' />
+                            <Li className= 'li-meu-perfil-info' icon={<MdOutlineMail />}title='jessicassds323ilva.1233455@gmail.com' />
+                            <Li className= 'li-meu-perfil-info' icon={<CiCalendarDate />}title='11/12/2005' />
                             <Li className= 'li-meu-perfil-info' icon={<MdOutlinePassword />}title='celular@' />
                         </ul>
                     </div>

@@ -122,6 +122,7 @@
 .container-meu-perfil {
   width: 500px;
   border-radius: 10px;
+  padding: 30px 45px;
   box-shadow: 1px 3px 5px 3px rgba(219, 219, 219, 0.3882352941);
   position: absolute;
   top: 50%;
@@ -244,6 +245,10 @@
   transition: all 1s;
 }
 
+.bt {
+  display: none;
+}
+
 .inputs-login-form {
   display: flex;
   flex-direction: column;
@@ -259,16 +264,20 @@
   border-bottom: 3px solid #22668D;
 }
 
+h1 {
+  font-size: 1.2rem;
+  text-align: center;
+  margin: 40px auto;
+}
+
 .container-progress {
   width: 70%;
   padding: 20px 30px;
-  border: 1px solid red;
   margin: 50px auto;
 }
 .container-progress .container-item-progress {
   display: flex;
   width: 100%;
-  border: 1px solid red;
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -278,7 +287,6 @@
   align-items: center;
   margin-top: 10px;
   justify-content: space-between;
-  border: 1px solid red;
   border-radius: 10px;
   background-color: rgba(224, 224, 224, 0.7137254902);
 }

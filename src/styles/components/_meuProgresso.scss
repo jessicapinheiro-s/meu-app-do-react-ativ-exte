@@ -1,16 +1,19 @@
 @import '../abstract/mixins';
 @import '../abstract/variaves';
 
+h1{
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 40px auto;
+}
 .container-progress {
     width: 70%;
     padding: 20px 30px;
-    border: 1px solid red;
     margin: 50px auto;
 
     .container-item-progress {
         display: flex;
         width: 100%;
-        border: 1px solid red;
         flex-wrap: wrap;
         justify-content: center;
     }
@@ -21,7 +24,6 @@
         align-items: center;
         margin-top: 10px;
         justify-content: space-between;
-        border: 1px solid red;
         border-radius: 10px;
         background-color: $cor-borda;
 

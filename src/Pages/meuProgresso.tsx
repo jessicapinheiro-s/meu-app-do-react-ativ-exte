@@ -63,6 +63,7 @@ export default function MeuProgresso() {
     return (
         <div>
             <MenuHeader nome='Jéssica' />
+            <h1>Meu Progresso</h1>
             <div className='container-progress'>
                 <div className='container-item-progress'>
                     {renderProgressIcons()}

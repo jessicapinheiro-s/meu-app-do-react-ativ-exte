@@ -7,7 +7,7 @@ import { FcShop } from "react-icons/fc";
 import { FcInTransit } from "react-icons/fc";
 import { FcCompactCamera } from "react-icons/fc";
 import Button from '../components/buttons/button';
-
+import minhaImg from '../imgs/image.png';
 
 
 export default function Dashboard() {
@@ -28,22 +28,32 @@ export default function Dashboard() {
             </div>
             <div className='container-dash'>
 
-                <Card>
+                {/*<Card>
                     <FcSearch className='icon' />
-                    <p>Magnifying glass</p>
                 </Card>
                 <Card>
                     <FcShop className='icon' />
-                    <p>Store</p>
                 </Card>
                 <Card>
                     <FcInTransit className='icon' />
-                    <p>Delivery</p>
                 </Card>
                 <Card>
                     <FcCompactCamera className='icon' />
-                    <p>Camera</p>
+                </Card>*/}
+                <Card>
+                    <img src={minhaImg} className='icon' />
                 </Card>
+                <Card>
+                    <img src={minhaImg} className='icon' />
+                </Card>
+                <Card>
+                    <img src={minhaImg} className='icon' />
+                </Card>
+                <Card>
+                    <img src={minhaImg} className='icon' />
+                </Card>
+                
+                
                 <div className='container-button'>
                     <Button className='buttonChoiceReponse' onClick={() => { answer() }}>Continuar</Button>
                 </div>
