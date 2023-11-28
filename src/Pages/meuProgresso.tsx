@@ -68,7 +68,7 @@ export default function MeuProgresso() {
                     {renderProgressIcons()}
                 </div>
                 <div className='container-bar-progress'>
-                    <button onClick={handleDecrement} disabled={progress === 0}>
+                    <button onClick={handleDecrement} disabled={progress === 0} className='bt'>
                         -
                     </button>
                     <div className='bar'style={{ width: '200px', margin: '0 10px' }} >
@@ -81,7 +81,7 @@ export default function MeuProgresso() {
                             }}
                         />
                     </div>
-                    <button onClick={handleIncrement} disabled={progress === 100}>
+                   <button onClick={handleIncrement} disabled={progress === 100} className='bt'>
                         +
                     </button>
                 </div>
