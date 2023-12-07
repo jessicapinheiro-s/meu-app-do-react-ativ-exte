@@ -115,7 +115,7 @@
   outline: none;
 }
 .container-dash .card .icon {
-  font-size: 50px;
+  width: 100px;
   margin: 5px;
 }
 
@@ -328,7 +328,7 @@ h1 {
     width: 400px;
   }
   .container-dash {
-    width: 350px;
+    width: 300px;
   }
   .nav-menu-header {
     justify-content: right;
