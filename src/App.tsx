@@ -15,14 +15,14 @@ const supabase = createClient("https://<project>.supabase.co", "sbp_c08ad84f8b7d
 function App() {
   const [countries, setCountries] = useState([]);
 
-  useEffect(() => {
+  /*useEffect(() => {
     getCountries();
   }, []);
 
-  async function getCountries() {
+  /*async function getCountries() {
     const { data } = await supabase.from("countries").select();
     setCountries(data);
-  }
+  }*/
 
   return (
     <Routes>
