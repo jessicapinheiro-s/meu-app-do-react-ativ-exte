@@ -10,7 +10,9 @@ import './styles/style.css';
 //Supabase
 import { createClient } from "@supabase/supabase-js";
 interface Profile{
-  name: string;
+  nome: string;
+  created_at: string;
+  id: number
 }
 
 const supabase = createClient("https://xamaiaybsfzwmjojqzjc.supabase.co", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhhbWFpYXlic2Z6d21qb2pxempjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDExMDYyNzQsImV4cCI6MjAxNjY4MjI3NH0.FkOp0ggJOj3xuecFISQTvdM93bHeXitFsBCQ305ixy4");
