@@ -4,6 +4,16 @@ import '../../styles/style.css';
 import Button from '../buttons/button';
 import { Link } from 'react-router-dom';
 
+
+
+interface UserProps{
+    nome: string,
+    email:string;
+    dataNascimento:string;
+    id: number;
+    password: string;
+}
+
 export default function Formulario() {
     //Definindo Estado
 
@@ -13,11 +23,12 @@ export default function Formulario() {
     const [password, setPassword] = useState('');
 
     //função que irá retornar algo
-    const handleCadastro = (event: any) => {
+    const handleCadastro = async (event: any) => {
         event.preventDefault();
         tratandoDados();
 
     }
+
     const limparCampo = () => {
         setName('');
         setEmail('');
@@ -27,19 +38,23 @@ export default function Formulario() {
 
     //função para criar, obter e remover dados do localStorage 
     function tratandoDados() {
-        interface UserProps{
-            nome: string,
-            email:string;
-            dataNascimento:string;
-            id: number;
-            password: string;
-        }
-        let listaUsers: Array<UserProps> = JSON.parse(localStorage.getItem('listaUsers') || '[]');
+        
+        let listaUsers: UserProps[] = JSON.parse(localStorage.getItem('listaUsers') || '[]');
 
         //const idList: Array<number> = listaUsers.map(user => user.id);
       
         let id: number = listaUsers.length == 0 ? 1 : listaUsers[listaUsers.length - 1].id+1;
         
+        
+
+        const userProps:UserProps = {
+            nome: name.toLocaleLowerCase().trimEnd().trimStart(),
+            email: email.toLocaleLowerCase().trimEnd().trimStart(),
+            dataNascimento: dataNascimento,
+            password: password.toLocaleLowerCase(),
+            id: id
+        }
+
         listaUsers.push({
             nome: name.toLocaleLowerCase().trimEnd().trimStart(),
             email: email.toLocaleLowerCase().trimEnd().trimStart(),
@@ -47,6 +62,7 @@ export default function Formulario() {
             password: password.toLocaleLowerCase(),
             id: id
         })
+
         localStorage.setItem('listaUsers', JSON.stringify(listaUsers));
         alert('Sua conta foi criada com sucesso!');
         limparCampo();
@@ -99,4 +115,4 @@ export default function Formulario() {
         </div>
 
     )
-}
+    }

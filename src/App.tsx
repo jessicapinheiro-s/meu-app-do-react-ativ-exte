@@ -9,21 +9,24 @@ import Login from './Pages/login'
 import './styles/style.css';
 //Supabase
 import { createClient } from "@supabase/supabase-js";
+interface Profile{
+  name: string;
+}
 
-const supabase = createClient("https://<project>.supabase.co", "sbp_c08ad84f8b7d3688f0dca1b2100ca8002dee679d");
+const supabase = createClient("https://xamaiaybsfzwmjojqzjc.supabase.co", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhhbWFpYXlic2Z6d21qb2pxempjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDExMDYyNzQsImV4cCI6MjAxNjY4MjI3NH0.FkOp0ggJOj3xuecFISQTvdM93bHeXitFsBCQ305ixy4");
 
 function App() {
-  const [countries, setCountries] = useState([]);
+  const [profiles, setProfiles] = useState<null | Profile[]>(null);
 
-  /*useEffect(() => {
-    getCountries();
+  useEffect(() => {
+    getProfiles();
   }, []);
 
-  /*async function getCountries() {
-    const { data } = await supabase.from("countries").select();
-    setCountries(data);
-  }*/
-
+  async function getProfiles() {
+    const { data } = await supabase.from("profiles").select();
+    setProfiles(data || []);
+    console.log(profiles);
+  }
   return (
     <Routes>
       <Route path='/' element={<Cadastro />} />

@@ -2,9 +2,9 @@ import { useState } from "react";
 import logo from '../../imgs/logo.svg';
 import '../../styles/style.css';
 import Button from '../buttons/button';
+import supaBaseService from '../../services/supabase';
 
 export default function FormularioLogin(props: any) {
-
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const limparCampo = () => {
@@ -29,6 +29,8 @@ export default function FormularioLogin(props: any) {
     //função para criar, obter e remover dados do localStorage 
 
     function tratandoDados(userInfo: object) {
+       const supData = supaBaseService.signIn({ email, password });
+       console.log(supData);
         const listaUsers: Array<UserProps> = JSON.parse(localStorage.getItem('listaUsers') || '[]');
         console.log({ userInfo, listaUsers });
         interface UserProps {
@@ -49,15 +51,15 @@ export default function FormularioLogin(props: any) {
             };
 
         let existe = listaUsers.filter(f => f.email == infoTipada.email && f.password == infoTipada.password);
-        
-        if(existe){
+
+        if (existe) {
             console.log('User existe');
             alert('Bem-vindo!');
-        }else{
+        } else {
             console.log('User não existe');
             alert('Não encontramos nenhum usuário');
         }
-        
+
     }
 
 
