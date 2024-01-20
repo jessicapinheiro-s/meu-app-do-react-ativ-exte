@@ -8,6 +8,7 @@ import Cadastro from './Pages/cadastro'
 import Login from './Pages/login'
 import './styles/style.css';
 //Supabase
+
 import { createClient } from "@supabase/supabase-js";
 interface Profile{
   nome: string;
@@ -15,7 +16,7 @@ interface Profile{
   id: number
 }
 
-const supabase = createClient("https://xamaiaybsfzwmjojqzjc.supabase.co", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhhbWFpYXlic2Z6d21qb2pxempjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDExMDYyNzQsImV4cCI6MjAxNjY4MjI3NH0.FkOp0ggJOj3xuecFISQTvdM93bHeXitFsBCQ305ixy4");
+const supabase = createClient("https://maxkhaaggntmnwophfhx.supabase.co", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1heGtoYWFnZ250bW53b3BoZmh4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDU3NjU1MTksImV4cCI6MjAyMTM0MTUxOX0.P5YVANpjihKLQoT0IMeuGAUhqymPS2PiYTgQaDAbv3E");
 
 function App() {
   const [profiles, setProfiles] = useState<null | Profile[]>(null);

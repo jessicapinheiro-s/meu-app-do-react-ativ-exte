@@ -2,33 +2,35 @@ import { useState } from "react";
 import logo from '../../imgs/logo.svg';
 import '../../styles/style.css';
 import Button from '../buttons/button';
-import supaBaseService from '../../services/supabase';
+import { supabase } from '../../supabaseClient';
 
 export default function FormularioLogin(props: any) {
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
+    const [loading, setLoading] = useState(false)
+    const [email, setEmail] = useState('')
+    //const [password, setPassword] = useState('');
+
     const limparCampo = () => {
         setEmail('');
-        setPassword('');
+        //setPassword('');
     }
 
-
-    //função que irá retornar algo
-    const handleCadastro = (event: any) => {
-        event.preventDefault();
-
-        const info = {
-            email,
-            password
-        }
-
-        tratandoDados(info);
+    const handleLogin = async (event: any) => {
+        //tratandoDados(info);
         limparCampo();
+        event.preventDefault()
+
+        setLoading(true)
+        const { error } = await supabase.auth.signInWithOtp({ email })
+
+        if (error) {
+            alert(error.message)
+        } else {
+            alert('Check your email for the login link!')
+        }
+        setLoading(false)
     }
-
     //função para criar, obter e remover dados do localStorage 
-
-    function tratandoDados(userInfo: object) {
+    /*function tratandoDados(userInfo: object) {
        const supData = supaBaseService.signIn({ email, password });
        console.log(supData);
         const listaUsers: Array<UserProps> = JSON.parse(localStorage.getItem('listaUsers') || '[]');
@@ -40,7 +42,7 @@ export default function FormularioLogin(props: any) {
             id: number;
             password: string;
         }
-
+  
         const infoTipada: {
             email: string;
             password: string;
@@ -49,9 +51,9 @@ export default function FormularioLogin(props: any) {
                 email: string;
                 password: string;
             };
-
+  
         let existe = listaUsers.filter(f => f.email == infoTipada.email && f.password == infoTipada.password);
-
+  
         if (existe) {
             console.log('User existe');
             alert('Bem-vindo!');
@@ -59,39 +61,35 @@ export default function FormularioLogin(props: any) {
             console.log('User não existe');
             alert('Não encontramos nenhum usuário');
         }
-
-    }
+  
+    }*/
 
 
     return (
         <div className="container-form">
-            <form className='modal-bg' onSubmit={handleCadastro}>
+            <form className='modal-bg' onSubmit={handleLogin}>
                 <div className='logo-cadastro'>
                     <img src={logo} alt="" />
                 </div>
                 <div className='inputs-login-form'>
                     <input
+                        className="inputField"
                         type="email"
-                        id='inEmail'
-                        placeholder='Email'
-                        required
+                        placeholder="Your email"
                         value={email}
-                        onChange={(event) => setEmail(event.target.value)} />
-                    <input
-                        type="password"
-                        id='inSenha'
-                        placeholder='Senha'
-                        required
-                        value={password}
-                        onChange={(event) => setPassword(event.target.value)} />
+                        required={true}
+                        onChange={(e) => setEmail(e.target.value)}
+                    />
                 </div>
+
                 <div className='container-buttons'>
-                    <Button className="button-login">
-                        Login
-                    </Button>
+                    <button className={'button-login'}  disabled={loading}>
+                        {loading ? <span>Loading</span> : <span>Login</span>}
+                    </button>
                 </div>
             </form>
         </div>
 
     )
+
 }
