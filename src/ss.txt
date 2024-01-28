@@ -1,0 +1,12 @@
+/* As rotas devem ser definidas dentro do componente Routes 
+      <Routes>
+        <Route path='/' element={<Cadastro />} />
+        <Route path='/dashboard' element={<Dashboard />} />
+        <Route path='/meuPerfil' element={<MeuPerfil nome='jessica' />}  />
+        <Route path='/meuProgresso' element={<MeuProgresso />} />
+        <Route path='/login' element={<Login />} />
+      </Routes>
+
+       /*<div className="container" style={{ padding: '50px 0 100px 0' }}>
+        {!session ? <FormularioLogin /> : <MeuPerfil key={session.user.id} session={session} />}
+      </div>

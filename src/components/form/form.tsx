@@ -1,72 +1,51 @@
 import { useState } from "react";
 import logo from '../../imgs/logo.svg';
 import '../../styles/style.css';
-import Button from '../buttons/button';
 import { Link } from 'react-router-dom';
-
-
-
-interface UserProps{
-    nome: string,
-    email:string;
-    dataNascimento:string;
-    id: number;
-    password: string;
-}
+import { useSupabaseClient } from "@supabase/auth-helpers-react";
 
 export default function Formulario() {
     //Definindo Estado
-
-    const [name, setName] = useState('');
+    const supabaseClient = useSupabaseClient();
+    const [loading, setLoading] = useState(false);
     const [email, setEmail] = useState('');
-    const [dataNascimento, setDataNascimento] = useState('');
     const [password, setPassword] = useState('');
 
     //função que irá retornar algo
     const handleCadastro = async (event: any) => {
         event.preventDefault();
-        tratandoDados();
+        ///tratandoDados();
 
+        limparCampo();
+
+        setLoading(true);
+        const { error } = await supabaseClient.auth.signUp({ email, password});
+
+        if (error) {
+            alert(error.message);
+        } else {
+            alert('Check your email for the login link!');
+        }
+        setLoading(false);
     }
-
     const limparCampo = () => {
-        setName('');
         setEmail('');
-        setDataNascimento('');
         setPassword('');
     }
 
     //função para criar, obter e remover dados do localStorage 
-    function tratandoDados() {
-        
+    /*function tratandoDados() {
+
         let listaUsers: UserProps[] = JSON.parse(localStorage.getItem('listaUsers') || '[]');
 
-        //const idList: Array<number> = listaUsers.map(user => user.id);
-      
-        let id: number = listaUsers.length == 0 ? 1 : listaUsers[listaUsers.length - 1].id+1;
-        
-        
-
-        const userProps:UserProps = {
-            nome: name.toLocaleLowerCase().trimEnd().trimStart(),
-            email: email.toLocaleLowerCase().trimEnd().trimStart(),
-            dataNascimento: dataNascimento,
-            password: password.toLocaleLowerCase(),
-            id: id
-        }
-
         listaUsers.push({
-            nome: name.toLocaleLowerCase().trimEnd().trimStart(),
             email: email.toLocaleLowerCase().trimEnd().trimStart(),
-            dataNascimento: dataNascimento,
             password: password.toLocaleLowerCase(),
-            id: id
         })
 
         localStorage.setItem('listaUsers', JSON.stringify(listaUsers));
-        alert('Sua conta foi criada com sucesso!');
         limparCampo();
-    }
+    }*/
 
 
     return (
@@ -76,43 +55,31 @@ export default function Formulario() {
                     <img src={logo} alt="" />
                 </div>
                 <div className='inputs-login-form'>
-                    <input
-                        type="text"
-                        id='inNome'
-                        placeholder='Nome'
-                        required
-                        value={name}
-                        onChange={(event) => setName(event.target.value)} />
+
                     <input
                         type="email"
                         id='inEmail'
-                        placeholder='Email'
+                        placeholder='email'
                         required
                         value={email}
                         onChange={(event) => setEmail(event.target.value)} />
-                    <input
-                        type="date"
-                        id='inDataNasc'
-                        placeholder='Data de Nascimento'
-                        required
-                        value={dataNascimento}
-                        onChange={(event) => setDataNascimento(event.target.value)} />
+
                     <input
                         type="password"
                         id='inSenha'
-                        placeholder='Senha'
+                        placeholder='password'
                         required
                         value={password}
                         onChange={(event) => setPassword(event.target.value)} />
                 </div>
                 <div className='container-buttons'>
-                    <Button className='button-cadastrar'>
-                        Cadastrar
-                    </Button>
+                    <button className={'button-cadastrar'}  disabled={loading}>
+                        {loading ? <span>Loading</span> : <span>Cadastrar</span>}
+                    </button>
                     <p><Link to='/login'>Login</Link></p>
                 </div>
             </form>
         </div>
 
     )
-    }
+}

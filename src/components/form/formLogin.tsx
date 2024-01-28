@@ -1,12 +1,12 @@
 import { useState } from "react";
 import logo from '../../imgs/logo.svg';
 import '../../styles/style.css';
-import Button from '../buttons/button';
 import { supabase } from '../../supabaseClient';
 
-export default function FormularioLogin(props: any) {
+export default function FormularioLogin() {
     const [loading, setLoading] = useState(false)
     const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
     //const [password, setPassword] = useState('');
 
     const limparCampo = () => {
@@ -20,7 +20,7 @@ export default function FormularioLogin(props: any) {
         event.preventDefault()
 
         setLoading(true)
-        const { error } = await supabase.auth.signInWithOtp({ email })
+        const { error } = await supabase.auth.signInWithPassword({ email, password })
 
         if (error) {
             alert(error.message)
@@ -29,40 +29,6 @@ export default function FormularioLogin(props: any) {
         }
         setLoading(false)
     }
-    //função para criar, obter e remover dados do localStorage 
-    /*function tratandoDados(userInfo: object) {
-       const supData = supaBaseService.signIn({ email, password });
-       console.log(supData);
-        const listaUsers: Array<UserProps> = JSON.parse(localStorage.getItem('listaUsers') || '[]');
-        console.log({ userInfo, listaUsers });
-        interface UserProps {
-            nome: string,
-            email: string;
-            dataNascimento: string;
-            id: number;
-            password: string;
-        }
-  
-        const infoTipada: {
-            email: string;
-            password: string;
-        }
-            = userInfo as {
-                email: string;
-                password: string;
-            };
-  
-        let existe = listaUsers.filter(f => f.email == infoTipada.email && f.password == infoTipada.password);
-  
-        if (existe) {
-            console.log('User existe');
-            alert('Bem-vindo!');
-        } else {
-            console.log('User não existe');
-            alert('Não encontramos nenhum usuário');
-        }
-  
-    }*/
 
 
     return (
@@ -79,6 +45,16 @@ export default function FormularioLogin(props: any) {
                         value={email}
                         required={true}
                         onChange={(e) => setEmail(e.target.value)}
+                    />
+                </div>
+                <div className='inputs-login-form'>
+                    <input
+                        className="inputField"
+                        type="password"
+                        placeholder="Your password"
+                        value={password}
+                        required={true}
+                        onChange={(e) => setPassword(e.target.value)}
                     />
                 </div>
 
