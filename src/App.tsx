@@ -13,22 +13,12 @@ import { supabase } from './supabaseClient';
 import { SessionContextProvider } from '@supabase/auth-helpers-react';
 
 
-interface Profile {
-  nome: string;
-  created_at: string;
-  id: number;
-}
-
+function App() {
 const supabaseSession = supabase;
 
-function App() {
   const [session, setSession] = useState<Session | null>(null)
-  const [profiles, setProfiles] = useState<null | Profile[]>(null);
   console.log(session);
-  useEffect(() => {
-    getProfiles();
-  }, []);
-
+ 
   useEffect(() => {
     supabaseSession.auth.getSession().then(({ data: { session } }) => {
       setSession(session);
@@ -39,20 +29,15 @@ function App() {
     });
   }, []);
 
-  async function getProfiles() {
-    const { data } = await supabaseSession.from("profiles").select();
-    setProfiles(data || []);
-    console.log(profiles);
-  }
-
+  
   return (
     <div>
       <SessionContextProvider supabaseClient={supabase} initialSession={session} >
         <Routes>
-          <Route path='/' element={<Cadastro />} />
+          <Route path='/' {...!session ? <FormularioLogin /> : <Dashboard/>} />
           <Route path='/dashboard' element={<Dashboard />} />
-          <Route path='/meuPerfil' {...!session ? <FormularioLogin /> : <MeuPerfil session={{ user: { id: "", email: "" } }} />} />
-          <Route path='/meuProgresso' element={<MeuProgresso />} />
+          <Route path='/meuPerfil' {...!session ? <FormularioLogin /> : <MeuPerfil session={{ user: { id: session.user.id, email: session.user.email } }} />} />
+          <Route path='/meuProgresso' {...!session ? <FormularioLogin /> : <MeuProgresso/>}/>
           <Route path='/login' element={<Login />} />
         </Routes>
       </SessionContextProvider>

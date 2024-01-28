@@ -4,8 +4,7 @@ import { supabase } from '../supabaseClient'
 interface Session {
   user: {
     id: string;
-    email: string;
-    // Add any other properties of the user if needed
+    email: string | undefined;
   };
   // Add any other properties of the session if needed
 }
