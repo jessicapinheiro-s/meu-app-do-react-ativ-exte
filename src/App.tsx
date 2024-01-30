@@ -37,8 +37,8 @@ const supabaseSession = supabase;
         <Routes>
           <Route path='/' element = {!session ? <Login /> : <Dashboard session={session}/>} />
           <Route path='/dashboard' element={!session ? <Login /> : <Dashboard session={session}/>} />
-          <Route path='/meuPerfil' {...!session ? <Cadastro /> : <MeuPerfil session={{ user: { id: session.user.id, email: session.user.email } }} />} />
-          <Route path='/meuProgresso' {...!session ? <Login /> : <MeuProgresso/>}/>
+          <Route path='/meuPerfil' element = {!session ? <Cadastro /> : <MeuPerfil session={{ user: { id: session.user.id, email: session.user.email } }} />} />
+          <Route path='/meuProgresso' element = {!session ? <Login /> : <MeuProgresso/>}/>
           <Route path='/login' element={<Login />} />
         </Routes>
       </SessionContextProvider>
